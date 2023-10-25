@@ -1,7 +1,7 @@
 // Sample page data in pages.json
 const pages = [
-    { pagename: 'jsonformatter', link: 'json.html' },
-    { pagename: 'xmlf', link: 'xmlf.html' }
+    { pagename: 'jsonformatter', link: 'pages/wip.html' },
+    { pagename: 'xmlf', link: 'pages/wip.html' }
 ];
 
 const navMenu = document.getElementById('nav-menu');
