@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        /* Add custom CSS for styling */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Three cards per row with some spacing */
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Practice Test Automation</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="cards-container">
+        <script>
+            // JavaScript code to dynamically create cards from an array
+            const cardsData = [
+                {
+                    title: "Registration Form",
+                    description: "I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.",
+                    link: "registration-form-multipage.html"
+                },
+                {
+                    title: "Card 2",
+                    description: "Another simple card with a different description. You can add as many cards as you like.",
+                    link: "../index.html"
+                },
+                {
+                    title: "Card 2",
+                    description: "Another simple card with a different description. You can add as many cards as you like.",
+                    link: "../index.html"
+                },
+                {
+                    title: "Card 2",
+                    description: "Another simple card with a different description. You can add as many cards as you like.",
+                    link: "../index.html"
+                }
+            ];
+
+            const cardsContainer = document.querySelector('.cards-container');
+
+            cardsData.forEach(cardData => {
+                const card = document.createElement('div');
+                card.classList.add('card', 'blue-grey', 'darken-1');
+
+                card.innerHTML = `
+                    <div class="card-content white-text">
+                        <span class="card-title">${cardData.title}</span>
+                        <p>${cardData.description}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="${cardData.link}">Learn More</a>
+                    </div>
+                `;
+
+                cardsContainer.appendChild(card);
+            });
+        </script>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
