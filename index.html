@@ -3,18 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Material-UI Website</title>
+    <title>Practice Test Automation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add custom CSS to make the header and menu responsive */
+        header, .container {
+            max-width: 1200px; /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            padding: 0 10px; /* Add some spacing on left and right for smaller screens */
+        }
+
+        .left-nav {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            padding: 20px;
+        }
+
+        .left-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-nav li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Practice Test Automation</a>
+            </div>
+        </nav>
+    </header>
+    
     <div class="container">
-        <nav class="left-nav">
+        <div class="left-nav">
             <ul id="nav-menu">
                 <!-- Navigation links will be generated dynamically in JavaScript -->
             </ul>
-        </nav>
+        </div>
         <div class="content" id="page-content">
             <!-- Content pages will be loaded here dynamically -->
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="tagline">
+            <h1>Hands-On Practice for Selenium, Cypress, and Playwright Enthusiasts</h1>
+            <p>Learning UI automation often requires a user interface (UI). Our simple and fast platform provides you with a canvas to practice and learn UI automation scripting. Dive in and enhance your skills!.</p>
+        </div>
+        <div class="slider">
+            <!-- Sliders content goes here -->
         </div>
     </div>
     <script src="script.js"></script>
