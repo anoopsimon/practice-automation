@@ -1,7 +1,7 @@
 $(document).ready(function () {
     M.AutoInit(); // Initialize Materialize CSS components
 
-    // Sample array of fields (you can replace this with your own data)
+    // UI Fields to render
     const fieldsArray = [
         { id: "first-name", type: "text", label: "First Name", required: true },
         { id: "last-name", type: "text", label: "Last Name", required: true },
@@ -36,6 +36,5 @@ $(document).ready(function () {
         });
     }
 
-    // Call the function to render fields from the array
     renderFields(fieldsArray);
 });
