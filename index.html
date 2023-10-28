@@ -5,9 +5,23 @@
   <!-- Add Bootstrap CSS CDN link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    /* Custom CSS for mobile-first responsiveness */
+    /* Custom CSS for mobile-first responsiveness and sticky footer */
     body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content {
+      flex: 1;
       padding: 10px;
+    }
+
+    .footer {
+      padding: 20px 0;
+      background-color: #007BFF;
+      color: #fff;
+      text-align: center;
     }
   </style>
 </head>
@@ -38,25 +52,19 @@
 </nav>
 
 <!-- Content -->
-<div class="container mt-4">
+<div class="container content">
   <h1>Welcome to Our Website</h1>
   <p>This is a mobile-friendly webpage using Bootstrap with a header and a footer.</p>
   <!-- Add your content here -->
 </div>
 
 <!-- Footer -->
-<footer class="bg-primary text-white mt-4">
+<footer class="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h5>About Us</h5>
-        <p>Your description goes here.</p>
-      </div>
-      <div class="col-md-6">
-        <h5>Contact Us</h5>
-        <p>Email: example@example.com<br>Phone: (123) 456-7890</p>
-      </div>
-    </div>
+    <h5>About Us</h5>
+    <p>Your description goes here.</p>
+    <h5>Contact Us</h5>
+    <p>Email: example@example.com<br>Phone: (123) 456-7890</p>
   </div>
 </footer>
 
