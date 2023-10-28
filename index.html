@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<head>
+  <title>Materialize CSS Page</title>
+  <!-- Add Materialize CSS CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
+    main {
+      flex: 1 0 auto;
+    }
+  </style>
+</head>
+<body>
 
-  <body>
-    <div class="container">
-    <div id="header"></div>
-    <!-- Content for Page 1 -->
-   <div>
-    Hi<br><br><br><br>
-   </div>
-   <div id="footer"></div>
-
+<!-- Header -->
+<div class="navbar-fixed">
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">Your Website</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- JavaScript will populate the navigation items here -->
+      </ul>
+    </div>
+  </nav>
 </div>
-  </body>
+
+<!-- Content -->
+<main class="container">
+  <h1>Welcome to Our Website</h1>
+  <p>This is a mobile-friendly Materialize CSS webpage with a dynamic navbar.</p>
+  <!-- Add your content here -->
+</main>
+
+<!-- Footer -->
+<footer class="page-footer blue">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h5>About Us</h5>
+        <p>Your description goes here.</p>
+      </div>
+      <div class="col s12 m6">
+        <h5>Contact Us</h5>
+        <p>Email: example@example.com<br>Phone: (123) 456-7890</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Add Materialize JavaScript CDN link at the end of the body for functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  // Initialize Materialize components if needed
+  M.AutoInit();
+
+  // Define your array of navigation items
+  const navItems = [
+    { text: 'Home', link: '#' },
+    { text: 'About', link: '#' },
+    { text: 'Services', link: '#' },
+    { text: 'Contact', link: '#' }
+  ];
+
+  // Populate the navigation items in the navbar
+  const navList = document.getElementById('nav-mobile');
+  navItems.forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.link;
+    a.textContent = item.text;
+    li.appendChild(a);
+    navList.appendChild(li);
+  });
+</script>
+
+</body>
 </html>
