@@ -1,91 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Materialize CSS Page</title>
-  <!-- Add Materialize CSS CDN link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Bootstrap Page</title>
+  <!-- Add Bootstrap CSS CDN link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+    /* Custom CSS for mobile-first responsiveness and sticky footer */
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    main {
-      flex: 1 0 auto;
+    .content {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .footer {
+      padding: 20px 0;
+      background-color: #007BFF;
+      color: #fff;
+      text-align: center;
+    }
+
+    .footer .about-us, .footer .contact-us {
+      display: inline-block;
     }
   </style>
 </head>
 <body>
 
 <!-- Header -->
-<div class="navbar-fixed">
-  <nav class="blue">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo" id="websiteTitle"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- JavaScript will populate the navigation items here -->
-      </ul>
-    </div>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand text-white" href="#">Your Website</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <!-- Content -->
-<main class="container">
-  <h1 id="pageTitle"></h1>
-  <p id="pageDescription"></p>
+<div class="container content">
+  <h1>Welcome to Our Website</h1>
+  <p>This is a mobile-friendly webpage using Bootstrap with a header and a footer.</p>
   <!-- Add your content here -->
-</main>
+</div>
 
 <!-- Footer -->
-<footer class="page-footer blue">
+<footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col s12 m6" id="aboutUs">
-      </div>
-      <div class="col s12 m6" id="contactUs">
+      <div class="col-md-6">
+        <div class="about-us">
+          <h5>About Us</h5>
+          <p>Your description goes here.</p>
+        </div>
+        <div class="contact-us">
+          <h5>Contact Us</h5>
+          <p>Email: example@example.com<br>Phone: (123) 456-7890</p>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Add Materialize JavaScript CDN link at the end of the body for functionality -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-  // Initialize Materialize components if needed
-  M.AutoInit();
-
-  // Define a JavaScript object to hold the content
-  const pageContent = {
-    websiteTitle: 'Your Website',
-    pageTitle: 'Welcome to Our Website',
-    pageDescription: 'This is a mobile-friendly Materialize CSS webpage with a dynamic navbar.',
-    navItems: [
-      { text: 'Home', link: '#' },
-      { text: 'About', link: '#' },
-      { text: 'Services', link: '#' },
-      { text: 'Contact', link: '#' }
-    ],
-    aboutUs: 'Your description goes heres.',
-    contactUs: 'Email: example@example.com<br>Phone: (123) 456-7890',
-  };
-
-  // Populate the content from the JavaScript object
-  document.getElementById('websiteTitle').textContent = pageContent.websiteTitle;
-  document.getElementById('pageTitle').textContent = pageContent.pageTitle;
-  document.getElementById('pageDescription').textContent = pageContent.pageDescription;
-  const navList = document.getElementById('nav-mobile');
-  pageContent.navItems.forEach(item => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = item.link;
-    a.textContent = item.text;
-    li.appendChild(a);
-    navList.appendChild(li);
-  });
-  document.getElementById('aboutUs').innerHTML = pageContent.aboutUs;
-  document.getElementById('contactUs').innerHTML = pageContent.contactUs;
-</script>
+<!-- Add Bootstrap JavaScript CDN link at the end of the body for functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
